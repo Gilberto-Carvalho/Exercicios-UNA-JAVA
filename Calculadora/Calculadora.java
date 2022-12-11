@@ -1,13 +1,17 @@
 public class Calculadora {
     public String Nome;
     public double SalarioMensal;
+    public double fhd;
+    public int diasUteis = 20;
+    public double horasUteisMes () {
+        double hm;
+        hm = 20 * fhd;
+        return hm;
+    }
 
-    private int diasUteis = 20;
-    private double fhd = 7;
-
-    public double horasUteisMes = diasUteis * fhd;
-
-    public double CalcularValorHora() {
-        return ((SalarioMensal * 2) / horasUteisMes);
+    public double CalcularValorHora () {
+        double vh;
+        vh = SalarioMensal / horasUteisMes();
+        return vh;
     }
 }
