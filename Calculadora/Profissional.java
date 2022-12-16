@@ -1,11 +1,11 @@
-import java.sql.Statement;
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Profissional {
-    public static double hd = 0;
+
     public static void main(String[] args) {
-        DBConector dbc = new DBConector();
+        DBConector dbConector = new DBConector();
+        Telas telas = new Telas();
         ItemSistema itemSistema = new ItemSistema();
         Calculadora calculadora = new Calculadora();
         Scanner sc = new Scanner(System.in);
@@ -15,8 +15,11 @@ public class Profissional {
         calculadora.SalarioMensal=sc.nextDouble();
         System.out.print("Quantas horas de trabalho possíveis no dia? ");
         calculadora.fhd = sc.nextDouble();
+
+
         System.out.print("Ditite o tipo de tela: (1-Entrada 2-Consulta 3-Gravação) ");
-        itemSistema.tipoItem = sc.next();
+        telas.tipo = sc.next();
+
 
         System.out.print("Qual a complexidade de 1 a 3 da tela de entrada e saida de dados ou digite 0 caso ela não exista? ");
         itemSistema.complexidadeEntSai = sc.nextInt();
@@ -81,5 +84,6 @@ public class Profissional {
         double valorTotalSistema = calculadora.CalcularValorHora() * totalHorasTelas * 1.3;
 
         System.out.println("\nValor Total do Orçamento: " + money.format(valorTotalSistema));
+
     }
 }

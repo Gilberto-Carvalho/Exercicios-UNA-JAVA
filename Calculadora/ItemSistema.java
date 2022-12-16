@@ -1,11 +1,6 @@
 public class ItemSistema {
     public String nomeItem;
     public String tipoItem;
-    public int cont=0;
-    public int telasEntSai=0;
-    public int telasCons=0;
-    public int telasGrav=0;
-    public int telas = (telasEntSai+telasCons+telasGrav);
     public int complexidadeEntSai = 0;
     public int complexidadeCons = 0;
     public int complexidadeGrav = 0;
